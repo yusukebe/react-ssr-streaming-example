@@ -1,4 +1,4 @@
-import React, { Suspense, useContext, useId, createContext } from 'react'
+import React, { Suspense } from 'react'
 import CountUp from './CountUp'
 
 let done = false
@@ -12,7 +12,7 @@ const sleep = (ms: number) => {
   )
 }
 
-const SometimesSuspend: React.FC = () => {
+const Component: React.FC = () => {
   if (done) {
     done = false
     return (
@@ -29,7 +29,7 @@ const App = () => {
     <div>
       <h1>React Streaming SSR</h1>
       <Suspense fallback={<p>Loading...</p>}>
-        <SometimesSuspend />
+        <Component />
       </Suspense>
       <CountUp />
     </div>

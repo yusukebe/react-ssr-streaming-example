@@ -16,6 +16,7 @@ app.get('/', async (c) => {
     </Html>
   )
   c.header('Content-Type', 'text/html; charset=utf-8')
+  c.header('X-Content-Type-Options', 'nosniff')
   return c.body(stream)
 })
 
