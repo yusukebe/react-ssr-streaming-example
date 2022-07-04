@@ -1,0 +1,8 @@
+name = "react-streaming-ssr"
+main = "src/index.tsx"
+
+compatibility_date = "2022-07-04"
+compatibility_flags = ["streams_enable_constructors"]
+
+[site]
+bucket = "./public"

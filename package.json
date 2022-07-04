@@ -1,0 +1,24 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "main": "src/server.tsx",
+  "scripts": {
+    "dev": "wrangler dev src/server.tsx",
+    "build": "esbuild --bundle src/client.tsx --outfile=public/static/client.js --minify",
+    "deploy": "wrangler publish src/server.tsx"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "global": "^4.4.0",
+    "hono": "^1.6.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "esbuild": "^0.14.48",
+    "wrangler": "^2.0.15"
+  }
+}
